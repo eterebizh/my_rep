@@ -16,7 +16,7 @@ vlans = [] # This list is going to store the VLANs
 
 commands = CONFIG.strip().split() 
 
-print commands
+print (commands)
 
 vlans = commands[-1].split(',') 
 
@@ -24,7 +24,7 @@ vlans = commands[-1].split(',')
 split entries using ',' charecter, output result into vlan 'list' variable
 '''
 
-print vlans
+print (vlans)
 
 
 

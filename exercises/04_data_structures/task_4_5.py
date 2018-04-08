@@ -16,15 +16,15 @@
 VLANS = [10, 20, 30, 1, 2, 100, 10, 30, 3, 4, 10]
 
 VLANS = set(VLANS)
-print VLANS
+print (VLANS)
 
 my_list = list (VLANS)
 my_list.sort()
-print "Result using simple set/list conversion:"
-print my_list
+print ("Result using simple Set/List conversion:")
+print (my_list)
 
 #The most obvious to solve this is to use recursion
-print "Check result using alternate solution:"
+print ("Check result using alternate solution:")
 output = []
 
 for i in VLANS: 
@@ -33,4 +33,4 @@ for i in VLANS:
 	else: output.append(i)
 
 output.sort()
-print output
+print (output)

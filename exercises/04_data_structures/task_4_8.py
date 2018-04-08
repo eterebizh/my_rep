@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 '''
 Задание 4.8
@@ -20,5 +21,17 @@
 
 IP = '192.168.3.1'
 
-##print (bin(3)[2:]) outputs dec-to-bin conversion result as string and trims first two characters
+mylist = []
+mylist = IP.split('.')
 
+ip_template = '''
+IP address:
+{:<8} {:<8} {:<8} {:<8}
+{:08b} {:08b} {:08b} {:08b}  
+'''
+
+#0 - adds leading zeroes
+#8 - defines column width
+#b - converts integer to boolean  
+
+print (ip_template.format (mylist[0],mylist[1],mylist[2],mylist[3],int(mylist[0]),int(mylist[1]), int(mylist[2]), int(mylist[3])))

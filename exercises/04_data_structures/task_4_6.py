@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 '''
 Задание 4.6
@@ -15,3 +16,23 @@ Outbound Interface:    FastEthernet0/0
 '''
 
 ospf_route = 'O        10.0.24.0/24 [110/41] via 10.0.13.3, 3d18h, FastEthernet0/0'
+ospf_route = ospf_route.replace ('O','OSPF').replace('via','').replace(',','')
+
+mylist = []
+mylist = ospf_route.split()
+
+
+text_template = '''
+{:26} {:8}		
+{:26} {:8}
+{:26} {:8}
+{:26} {:8}
+{:26} {:8}
+{:26} {:8}
+'''
+
+#0 - adds leading zeroes
+#8 - defines column width
+#b - converts integer to boolean  
+
+print (text_template.format ('Protocol', mylist[0],'Prefix:', mylist[1],'AD/Metric',mylist[2].strip('[]'),'Next-Hop:',mylist[3],'Last update:',mylist[4],'Outbound Interface:',mylist[5]))

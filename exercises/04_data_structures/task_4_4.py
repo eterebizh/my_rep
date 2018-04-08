@@ -16,9 +16,18 @@
 command1 = 'switchport trunk allowed vlan 1,3,10,20,30,100'
 command2 = 'switchport trunk allowed vlan 1,3,100,200,300'
 
+
 array1 = []
 array2 = []
 
+array1 = command1.replace ('switchport trunk allowed vlan ', '').strip().split(',')
+array2 = command2.replace ('switchport trunk allowed vlan ', '').strip().split(',')
+
+vlans1 = set(array1) #define 'SET1' from 'list'
+vlans2 = set(array2) #define 'SET2' from 'list'
+
+array_net = list (vlans1.intersection(vlans2)) # find an intersection of two SETs, create a list out of the result 
+print (array_net) # print result
 
 '''
 #First solution is to use for-i. Though this violates the rule
