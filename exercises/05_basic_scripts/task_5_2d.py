@@ -47,7 +47,7 @@ london_co = {
 
 keys1 = london_co.keys()
 
-device = input ("Enter device name (" + ','.join(keys1) + "):").lower()
+device = input ("Enter device name (" + ','.join(keys1) + "):").lower(w)
 
 while device not in keys1:  # if value doesn’t exist in the dictionary keys, then start all over again
     print ("You typed something wrong")

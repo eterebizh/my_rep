@@ -15,6 +15,7 @@ fast_int = {'access': { # define a dictionary
 
 for iface, vlan in fast_int['access'].items():
 	print ('Interface FastEthernet{}'.format(iface))
+
 	for command in access_template:
 		if command.endswith('access vlan'):
 			print (' {} {}'.format(command,vlan))
